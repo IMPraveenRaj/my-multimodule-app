@@ -1,0 +1,35 @@
+openapi: 3.0.1
+info:
+  title: Sample API
+  version: 1.0.0
+paths:
+  /user:
+    post:
+      summary: Create a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreateRequest'
+      responses:
+        '201':
+          description: User created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+components:
+  schemas:
+    UserCreateRequest:
+      type: object
+      properties:
+        name:
+          type: string
+    UserResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
