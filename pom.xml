@@ -13,6 +13,7 @@
     <module>contracts</module>
     <module>dto-generator</module>
     <module>endpoint</module>
+    <module>testing-app</module>
   </modules>
 
   <properties>
